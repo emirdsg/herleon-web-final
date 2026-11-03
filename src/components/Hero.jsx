@@ -1,0 +1,4 @@
+import React from 'react';
+import {whatsappLink} from '../config/contact.js';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
+export default function Hero(){return <section className="reference-hero" id="inicio"><img className="reference-background" src="/assets/hero-original.jpeg" alt="Mamparas corredizas de aluminio negro conectando el interior con una terraza y jardín" fetchPriority="high"/><div className="hero-shade"/><div className="reference-content wrap"><h1>Transformamos<br/>tus espacios con<br/>precisión técnica y<br/>estética.</h1><p>Soluciones de alta calidad en vidrio y<br className="desktop-break"/> aluminio para tu hogar o constructora.</p><a className="visit-button" href={whatsappLink("Hola, Herleon. Quisiera agendar una visita técnica para mi proyecto.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={20}/>Agendar visita técnica</a></div></section>}

@@ -1,0 +1,9 @@
+import React from 'react';
+import {ArrowRight,FileText,Ruler,Wrench,ShieldCheck} from 'lucide-react';
+const stages=[
+ {badge:'01 Etapa inicial',Icon:FileText,title:<>Cotización breve<br/>y detallada</>,text:'Especificación transparente de espesores de cristal, series de aluminio y accesorios sin costos ocultos ni letras pequeñas.'},
+ {badge:'02 Visita',Icon:Ruler,title:<>Visita técnica<br/>en tu hogar</>,text:'Técnicos uniformados con fotocheck, EPP reglamentario y equipo de medición láser digital para asegurar encaje milimétrico.'},
+ {badge:'03 Ejecución',Icon:Wrench,title:<>Instalación<br/>profesional</>,text:'Instalación silenciosa y pulcra con protección integral de pisos, retiro de viruta y entrega libre de residuos adhesivos.'},
+ {badge:'04 Entrega',Icon:ShieldCheck,title:<>Garantía<br/>postservicio</>,text:'Entrega de acta de conformidad, guía de mantenimiento preventivo y póliza física de garantía por escrito con asistencia directa.'}
+];
+export default function Process({onQuote}){return <section className="process-reference" id="proceso" aria-labelledby="process-title"><div className="process-reference-wrap"><div className="process-reference-heading"><div><span className="process-reference-eyebrow">NUESTRO PROCESO</span><h2 id="process-title">Metodología Transparente</h2><p>Sin sorpresas, sin informalidad. Control total de tu inversión desde el día uno mediante trazabilidad técnica documentada.</p></div><button className="process-quote" onClick={onQuote}>Solicitar cotización <ArrowRight size={19}/></button></div><ol className="process-reference-stages">{stages.map(({Icon,...s})=><li className="process-reference-card" key={s.badge}><div className="process-card-top"><span className="process-stage">{s.badge}</span><span className="process-step-icon"><Icon size={23} strokeWidth={1.8} aria-hidden="true"/></span></div><h3>{s.title}</h3><p>{s.text}</p></li>)}</ol></div></section>}
